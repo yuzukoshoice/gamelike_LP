@@ -20,7 +20,8 @@ body {
     color: var(--text-color);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden; /* Avoid horizontal scroll */
+    overflow-x: hidden;
+    /* Avoid horizontal scroll */
 }
 
 /* --- Game Overlay & Canvas --- */
@@ -31,14 +32,16 @@ body {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    pointer-events: none; /* Let clicks pass through if canvas is transparent, handled by JS */
+    pointer-events: none;
+    /* Let clicks pass through if canvas is transparent, handled by JS */
 }
 
 #game-canvas {
     display: block;
     width: 100%;
     height: 100%;
-    pointer-events: auto; /* Re-enable pointer events for the game */
+    pointer-events: auto;
+    /* Re-enable pointer events for the game */
 }
 
 /* UI Layer */
@@ -131,7 +134,7 @@ button:hover {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Main Content (The "Prize") --- */
@@ -161,8 +164,11 @@ button:hover {
 .hero::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
@@ -292,23 +298,32 @@ button:hover {
     transition: all 0.3s;
     background-size: cover;
     background-position: center;
+    text-decoration: none;
 }
 
 .gallery-item:hover {
     color: #fff;
-    box-shadow: inset 0 0 0 200px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.5);
 }
 
 /* Mock Images using Gradients */
-.item-1 { background-image: linear-gradient(45deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%); }
-.item-2 { background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); }
-.item-3 { background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); }
+.item-1 {
+    background-image: linear-gradient(45deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%);
+}
+
+.item-2 {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.item-3 {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
 
 /* Contact */
 .contact {
     padding: 80px 0;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMmIyYjJiIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM0NDQ0NDQiPjwvcmVjdD4KPC9zdmc+');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMmIyYjJiIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM0NDQ0NDQiPjwvcmVjdD4KPC9zdmc+');
 }
 
 .contact h2 {
@@ -329,9 +344,9 @@ button:hover {
     border-radius: 30px;
     border: none;
     width: 300px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact button {
@@ -348,13 +363,33 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title { font-size: 3rem; }
-    .gallery-grid { grid-template-columns: 1fr; height: auto; }
-    .gallery-item { height: 200px; }
-    .contact form { flex-direction: column; align-items: center; }
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+
+    .contact form {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -280,9 +280,9 @@ button:hover {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    height: 400px;
+    min-height: 400px;
 }
 
 .gallery-item {
@@ -299,6 +299,8 @@ button:hover {
     background-size: cover;
     background-position: center;
     text-decoration: none;
+    min-height: 200px;
+    /* Ensure visibility */
 }
 
 .gallery-item:hover {
@@ -318,6 +320,12 @@ button:hover {
 .item-3 {
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
+
+.item-4 {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Cyan Blue */
 
 /* Contact */
 .contact {

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gacha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>CREATOR GACHA</h1>
+            <button id="collection-btn">COLLECTION (<span id="collected-count">0</span>/<span
+                    id="total-count">0</span>)</button>
+        </header>
+
+        <main id="gacha-screen">
+            <div class="machine-container">
+                <div class="machine-top">
+                    <div class="glass-dome">
+                        <div class="capsules">
+                            <div class="capsule c1"></div>
+                            <div class="capsule c2"></div>
+                            <div class="capsule c3"></div>
+                            <div class="capsule c4"></div>
+                            <div class="capsule c5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="machine-body">
+                    <div class="handle-base">
+                        <div id="handle" class="handle"></div>
+                    </div>
+                    <div class="exit-hole"></div>
+                </div>
+            </div>
+
+            <button id="play-btn">TURN (FREE)</button>
+        </main>
+
+        <!-- Result Modal -->
+        <div id="result-modal" class="modal hidden">
+            <div class="modal-content">
+                <div id="capsule-open-anim" class="hidden"></div>
+                <div id="result-card" class="hidden">
+                    <h2 id="result-rarity" class="ssr">SSR</h2>
+                    <div id="result-image"></div> <!-- Placeholder for item icon -->
+                    <h3 id="result-title">Title Here</h3>
+                    <p id="result-desc">Description here...</p>
+                    <button id="close-result" class="primary-btn">OK</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collection Modal -->
+        <div id="collection-modal" class="modal hidden">
+            <div class="modal-content large">
+                <h2>COLLECTION</h2>
+                <div id="collection-grid">
+                    <!-- Items injected here -->
+                </div>
+                <button id="close-collection" class="secondary-btn">CLOSE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Adventure - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div id="status-bar">
+                <span id="gem-counter">GEMS: 0/4</span>
+                <span id="hp-bar" class="hidden">HP: <span id="hp-val">3</span></span>
+            </div>
+            <div id="controls-hint">Collect 4 GEMS to unlock the GATE! <br> Arrow Keys to Move</div>
+            <div id="interaction-prompt" class="hidden">PRESS SPACE</div>
+
+            <!-- Mobile Controls -->
+            <div id="mobile-controls">
+                <div class="d-pad">
+                    <button id="up-btn">▲</button>
+                    <div class="horizontal">
+                        <button id="left-btn">◀</button>
+                        <button id="right-btn">▶</button>
+                    </div>
+                    <button id="down-btn">▼</button>
+                </div>
+                <button id="action-btn">A</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Modals (Dialogues) -->
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-box">
+            <h2 id="modal-title">TITLE</h2>
+            <div id="modal-content">
+                <!-- Dynamic Content Here -->
+            </div>
+            <button id="close-modal-btn">CLOSE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

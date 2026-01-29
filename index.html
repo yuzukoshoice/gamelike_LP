@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNVEIL - Interactive Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="ブロックを崩して未来を体感せよ。Playable LP Concept.">
+</head>
+
+<body>
+
+    <!-- Game Overlay -->
+    <div id="game-overlay">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-layer">
+            <div id="start-screen">
+                <h1>UNVEIL</h1>
+                <p>Click to Start & Break the Blocks</p>
+                <button id="start-btn">START EXPERIENCE</button>
+            </div>
+            <div id="game-controls" class="hidden">
+                <div class="score-board">SCORE: <span id="score">0</span></div>
+                <button id="skip-btn">SKIP & REVEAL ALL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden initially) -->
+    <main id="main-content">
+        <header class="hero">
+            <div class="container">
+                <h2 class="hero-subtitle">NEXT GENERATION WEB EXPERIENCE</h2>
+                <h1 class="hero-title">DIGITAL<br>FRONTIER</h1>
+                <p class="hero-text">
+                    私たちは、常識という壁を壊し、<br>
+                    まだ見ぬデジタルの地平線を切り拓きます。
+                </p>
+                <a href="#contact" class="cta-button">お問い合わせ</a>
+            </div>
+        </header>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h3>OUR SERVICES</h3>
+                    <h2>限界を超える技術力</h2>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🚀</div>
+                        <h4>Speed Optimization</h4>
+                        <p>光速のロード時間を実現し、ユーザー体験を損ないません。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎨</div>
+                        <h4>Creative Design</h4>
+                        <p>視覚を刺激する、美しく機能的なデザインを提供します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🛡️</div>
+                        <h4>Robust Security</h4>
+                        <p>鉄壁の守りで、あなたの大切なデータを保護します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h3>WORKS</h3>
+                    <h2>制作実績</h2>
+                </div>
+                <!-- Placeholders for visual interest -->
+                <div class="gallery-grid">
+                    <div class="gallery-item item-1"><span>Future City</span></div>
+                    <div class="gallery-item item-2"><span>Cyber Interface</span></div>
+                    <div class="gallery-item item-3"><span>Neon Nights</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>CONTACT US</h2>
+                <p>未来を共に創りましょう。</p>
+                <form onsubmit="event.preventDefault(); alert('デモページのため送信されません');">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 UNVEIL Project. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
